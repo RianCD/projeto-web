@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title> <!-- T´tulo da página-->
+    <link rel="shortcut icon" href="../assets/icons/Icons-Furious.256.png"> <!-- Adição do favicon-->
+</head>
+<body>
+    <h2>Home link: </h2>
+    <a href="../pages/index.html" hreflang="en" target="_blank">Home</a>
+    <!-- link para a página "index.html" junto ao atributo  hreflang definindo o idioma principal da página com en (Englih) e o atributo "_blank" indicando que o link será aberto em outra aba do browser-->
+     <hr> <!-- utilizado para criar uma linha horizontal -->
+    <h2>List of the 5 most famous languages of programming</h2>
+    <ol type="1"> <!-- Lista ordenada com números:-->
+        <!-- Cada uma das tags "li" dentro da lista ordenada (ol) se refere a um elemento dentro dela-->
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>SQL</li>
+    </ol>
+    <h2>Dynamic image</h2>
+
+    <picture>
+<!--A tag picture permite exibir diferentes imagens de acordo com o tamanho em pixels do dispositivo-->
+        <source media="(max-widht: 1000px)" srcset="../infraestructure/images/profundo-m.png" type="image/png">
+<!--dentro da tag source: o atributo media especifica que se o tamanho for de no máximo 1000px a imagem cujo a URL está no atributo srcset será exibida, a tag type especifica o tipo de imagem a ser exibido-->
+        <img src="../assets/images/profuno-g.png" alt="profundo-the-boys">
+<!-- caso a tag source não seja atendida a tag img é acionada-->
+    </picture>
+</body>
+</html>
