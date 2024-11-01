@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define o tipo de documento como HTML5 e configura o idioma da página como inglês -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suporte a diversos caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para diferentes tamanhos de tela -->
+    <title>Atividade 4</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../global.css"> <!-- Vincula um arquivo CSS externo para estilização -->
+</head>
+<body>
+
+    <div>
+        <h1>SandBox page</h1> <!-- Título principal da página -->
+        <a href="../pages/index.html" target="_blank">Home Page</a> <!-- Link para a página inicial, abre em nova aba -->
+    </div>
+    
+    <h2>World Reggae Music</h2> <!-- Subtítulo para a seção de música -->
+    <audio preload="metadata" controls autoplay loop> <!-- Elemento de áudio com reprodução automática e repetição -->
+        <source src="../assets/midia/world-reggae.mpeg" type="audio/mpeg"> <!-- Fonte do áudio em formato MPEG -->
+        <p>Seu navegador não suporta áudio 
+            <!-- Link para download do áudio caso o navegador não suporte o elemento de áudio -->
+            <a href="../assets/midia/world-reggae.mpeg" download="world-reggae.mpeg" type="audio/mpeg">Baixar áudio</a>
+        </p>
+    </audio>
+
+    <h2>Auge do CR7</h2> <!-- Subtítulo para a seção de vídeo -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hqPEIblCwQo?si=RmytRmH1pc79WthB" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe> <!-- Iframe para incorporar um vídeo do YouTube com várias permissões habilitadas -->
+
+</body>
+</html>
