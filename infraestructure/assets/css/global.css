@@ -1,0 +1,37 @@
+/* CSS Externo: Definição de estilo externo para a página */
+
+/* Estilo do corpo da página */
+body {
+     /* Define uma imagem de fundo para a seção com o id #background-image */
+     background-image: url(../images/coding.jpg);
+    
+     /* Evita que a imagem se repita, exibindo apenas uma instância */
+     background-repeat: no-repeat;
+     
+     /* Define que a imagem de fundo fique fixa enquanto o conteúdo da página rola */
+     background-attachment: fixed;
+     
+     /* Centraliza a imagem no centro da tela */
+     background-position: center center;
+     
+     /* Ajusta a imagem para cobrir toda a área da janela */
+     background-size: cover;
+}
+
+
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+ol {
+    color: white;
+}
