@@ -15,3 +15,6 @@ o próximo diretório a ser analisado é o "usuario". Este diretório contém re
     »assets: Contém recursos estáticos específicos para o módulo de usuário.
     »css, images, js e pages: são diretórios usados especificamente em páginas relacionadas ao usuário
 e por último temos os diretório components, este diretório pode conter componentes reutilizáveis dentro do códgio do projeto, como por exemplo os menus.
+
+ATIVIDADE 6
+atividade 6 foi designada para definição de tags semanticas dentro do projeto;
