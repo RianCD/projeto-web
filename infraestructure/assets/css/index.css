@@ -1,0 +1,32 @@
+header {
+    padding: 20px;         /* Espaçamento interno */
+    margin: 10px 0;        /* Espaçamento externo */
+    border: 1px solid #ccc; /* Bordas */
+    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+    background-color: #f9f9f9; /* Cor de fundo */
+    text-align: center;
+  }
+
+body{
+    background-color: #707070;
+}
+
+main{
+    text-align: center;
+}
+
+span{
+    padding: 2px;
+    margin: 10px;
+    text-align: center;
+}
+
+section{
+    padding: 20px;         /* Espaçamento interno */
+    margin: 0 auto;        /* Espaçamento externo */
+    border: 1px solid #ccc; /* Bordas */
+    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+    width: 50%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
