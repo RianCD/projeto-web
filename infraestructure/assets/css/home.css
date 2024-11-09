@@ -1,0 +1,191 @@
+header {
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    background-color: #444040; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    opacity: 0.9; /* Define a transparência do cabeçalho */
+    display: flex; /* Exibe itens em linha no cabeçalho */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    height: 50px; /* Altura do cabeçalho */
+}
+
+.logo {
+    width: 50px; /* Largura da imagem do logo */
+    margin-right: 20px; /* Espaçamento entre a logo e o nome */
+}
+
+body {
+    background: url(../images/logo-site.png) no-repeat; /* Define a imagem de fundo e impede repetição */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-position: center center; /* Centraliza a imagem na tela */
+    width: 99%; /* Largura do corpo da página */
+    background-color: #ccc; /* Cor de fundo do corpo da página */
+}
+
+body::before {
+    content: ""; /* Adiciona um elemento pseudo antes do conteúdo */
+    position: absolute; /* Posiciona-o em relação à tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(70, 70, 70, 0.7); /* Sobreposição semi-transparente escura */
+    z-index: 1; /* Define a prioridade na sobreposição */
+}
+
+body * {
+    position: relative; /* Garante que o conteúdo principal esteja acima da sobreposição */
+    z-index: 2; /* Define prioridade acima da sobreposição */
+}
+
+nav {
+    padding: 0px; /* Remove espaçamento interno */
+    margin: 0px; /* Remove espaçamento externo */
+    border: 0px solid; /* Remove borda */
+    background-color: #ccc; /* Cor de fundo do menu de navegação */
+    color: white; /* Cor do texto */
+    opacity: 0.8; /* Define a transparência do menu */
+    height: 50px; /* Altura do menu */
+    display: flex; /* Exibe itens em linha */
+}
+
+ul li {
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+nav#menu ul {
+    list-style: none; /* Remove marcadores da lista */
+    text-transform: uppercase; /* Deixa o texto em maiúsculo */
+    position: relative; /* Define posição relativa */
+    top: -20; /* Ajusta posição vertical */
+    left: 300xp; /* Ajusta posição horizontal (valor incorreto "xp") */
+}
+
+nav#menu li {
+    display: inline-block; /* Exibe itens em linha */
+    background-color: #ccc; /* Cor de fundo dos itens */
+    padding: 0px; /* Remove espaçamento interno */
+    margin: 0 10px; /* Espaçamento horizontal entre itens */
+    border-radius: 5px; /* Arredonda bordas dos itens */
+}
+
+nav#menu li:hover {
+    background-color: #383838; /* Cor ao passar o mouse sobre o item */
+    border-radius: 6px; /* Aumenta o arredondamento ao passar o mouse */
+}
+
+nav#menu a {
+    color: black; /* Cor do texto dos links */
+    text-decoration: underline; /* Sublinhar o texto do link */
+    font-size: 14px; /* Tamanho da fonte dos links */
+}
+
+main h1 {
+    padding: 20px; /* Espaçamento interno do título */
+    margin: 0px; /* Remove o espaçamento externo */
+    text-align: center; /* Centraliza o texto */
+    font-size: 300%; /* Aumenta o tamanho do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+}
+
+main p {
+    margin: 0px; /* Remove o espaçamento externo */
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+}
+
+section {
+    padding: 20px; /* Espaçamento interno */
+    margin: 10px auto; /* Espaçamento externo com centralização */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 10px; /* Arredondamento dos cantos */
+    width: 50%; /* Largura da seção */
+    background-color: #707070; /* Cor de fundo */
+    text-align: center; /* Centraliza o texto */
+    opacity: 0.8; /* Define a transparência */
+}
+
+figure {
+    width: 300px; /* Largura fixa do contêiner da figura */
+}
+
+figure img {
+    width: 100%; /* Faz a imagem preencher o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+figure {
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+@media (min-width: 768px) {
+    body {
+        background-position: center center; /* Centraliza a imagem de fundo */
+        width: 99%; /* Largura do corpo */
+        background-color: #ccc; /* Cor de fundo */
+    }
+    
+    nav {
+        display: flex; /* Exibe itens em linha */
+        justify-content: flex-start; /* Alinha itens à esquerda */
+    }
+    
+    nav#menu ul {
+        position: relative; /* Define posição relativa */
+        top: 0; /* Alinha ao topo */
+        left: 0; /* Alinha à esquerda */
+    }
+    
+    section {
+        width: 50%; /* Largura da seção no desktop */
+        margin: 10px auto; /* Centraliza a seção */
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column; /* Exibe itens em coluna */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        height: auto; /* Ajusta a altura */
+    }
+    
+    .logo {
+        width: 40px; /* Reduz o tamanho da logo */
+        margin: 10px auto; /* Centraliza e define espaçamento */
+    }
+    
+    nav {
+        display: flex; /* Exibe itens em linha */
+        flex-direction: column; /* Exibe itens em coluna */
+        align-items: center; /* Centraliza itens */
+        background-color: #444040; /* Cor de fundo do menu */
+    }
+
+    nav#menu ul {
+        padding: 0px; /* Remove espaçamento */
+        text-align: center; /* Centraliza texto */
+        display: flex; /* Exibe itens em linha */
+        width: 100%; /* Largura total */
+        gap: 8px; /* Espaço entre itens */
+    }
+
+    nav#menu li {
+        display: block; /* Exibe itens em bloco */
+        margin: 5px 0; /* Espaço entre itens */
+        width: 100%; /* Largura total */
+        padding: 10px; /* Espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    section {
+        width: 90%; /* Largura da seção em dispositivos móveis */
+        margin: 10px auto; /* Centraliza a seção */
+        padding: 15px; /* Espaçamento interno */
+    }
+
+    figure {
+        width: 80%; /* Largura da figura */
+        margin: auto; /* Centraliza a figura */
+    }
+}

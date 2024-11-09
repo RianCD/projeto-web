@@ -9,49 +9,54 @@
     <link rel="stylesheet" href="../assets/css/sandbox.css"> <!-- Vincula um arquivo CSS externo para estilização -->
 </head>
 <body id="background-image">
-    <div>
+    <header>
         <h1>SandBox page</h1> <!-- Título principal da página -->
         <a href="../pages/index.html" hreflang="en" target="_blank">| Home |</a>
-        <hr> <!-- utilizado para criar uma linha horizontal -->
-    </div>
+    </header>
 
-    <h1>ATIVIDADE 3</h1>
-    <h2>List of the 5 most famous languages of programming</h2>
-    <ol type="1"> <!-- Lista ordenada com números:-->
-        <!-- Cada uma das tags "li" dentro da lista ordenada (ol) se refere a um elemento dentro dela-->
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>C++</li>
-        <li>SQL</li>
-    </ol>
-    <h2>Dynamic image</h2>
+    <main>
+        <section>
+            <h1>ATIVIDADE 3</h1>
+        <h2>List of the 5 most famous languages of programming</h2>
+        <ol> <!-- Lista ordenada com números:-->
+            <!-- Cada uma das tags "li" dentro da lista ordenada (ol) se refere a um elemento dentro dela-->
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>SQL</li>
+        </ol>
+        <h2>Dynamic image</h2>
+    
+        <picture>
+    <!--A tag picture permite exibir diferentes imagens de acordo com o tamanho em pixels do dispositivo-->
+            <source media="(max-widht: 1000px)" srcset="../infraestructure/images/profundo-m.png" type="image/png">
+    <!--dentro da tag source: o atributo media especifica que se o tamanho for de no máximo 1000px a imagem cujo a URL está no atributo srcset será exibida, a tag type especifica o tipo de imagem a ser exibido-->
+            <img src="../assets/images/profuno-g.png" alt="profundo-the-boys">
+    <!-- caso a tag source não seja atendida a tag img é acionada-->
+        </picture>
+        </section>
 
-    <picture>
-<!--A tag picture permite exibir diferentes imagens de acordo com o tamanho em pixels do dispositivo-->
-        <source media="(max-widht: 1000px)" srcset="../infraestructure/images/profundo-m.png" type="image/png">
-<!--dentro da tag source: o atributo media especifica que se o tamanho for de no máximo 1000px a imagem cujo a URL está no atributo srcset será exibida, a tag type especifica o tipo de imagem a ser exibido-->
-        <img src="../assets/images/profuno-g.png" alt="profundo-the-boys">
-<!-- caso a tag source não seja atendida a tag img é acionada-->
-    </picture>
+        <section>
+            <h1>ATIVIDADE 4</h1>
+            <h2>World Reggae Music</h2> <!-- Subtítulo para a seção de música -->
+            <audio preload="metadata" controls play loop> <!-- Elemento de áudio com reprodução automática e repetição -->
+                <source src="../assets/midia/world-reggae.mpeg" type="audio/mpeg"> <!-- Fonte do áudio em formato MPEG -->
+                <p>Seu navegador não suporta áudio 
+                <!-- Link para download do áudio caso o navegador não suporte o elemento de áudio -->
+                <a href="../assets/midia/world-reggae.mpeg" download="world-reggae.mpeg" type="audio/mpeg">Baixar áudio</a>
+                </p>
+            </audio>
 
-    <h1>ATIVIDADE 4</h1>
-    <h2>World Reggae Music</h2> <!-- Subtítulo para a seção de música -->
-    <audio preload="metadata" controls play loop> <!-- Elemento de áudio com reprodução automática e repetição -->
-        <source src="../assets/midia/world-reggae.mpeg" type="audio/mpeg"> <!-- Fonte do áudio em formato MPEG -->
-        <p>Seu navegador não suporta áudio 
-            <!-- Link para download do áudio caso o navegador não suporte o elemento de áudio -->
-            <a href="../assets/midia/world-reggae.mpeg" download="world-reggae.mpeg" type="audio/mpeg">Baixar áudio</a>
-        </p>
-    </audio>
-
-    <h2>Auge do CR7</h2> <!-- Subtítulo para a seção de vídeo -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/hqPEIblCwQo?si=RmytRmH1pc79WthB" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-    </iframe> <!-- Iframe para incorporar um vídeo do YouTube com várias permissões habilitadas -->
+            <h2>Auge do CR7</h2> <!-- Subtítulo para a seção de vídeo -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hqPEIblCwQo?si=RmytRmH1pc79WthB" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe> <!-- Iframe para incorporar um vídeo do YouTube com várias permissões habilitadas -->
+        </section>
+    </main>
 
 </body>
 </html>

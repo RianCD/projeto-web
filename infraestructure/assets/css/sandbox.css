@@ -1,9 +1,9 @@
 /* CSS Externo: Definição de estilo externo para a página */
 
 /* Estilo do corpo da página */
-#background-image {
+body {
     /* Define uma imagem de fundo para a seção com o id #background-image */
-    background-image: url(../images/coding.jpg);
+    background-image: url(../images/fundo.preto.vermelho.jpg);
    
     /* Evita que a imagem se repita, exibindo apenas uma instância */
     background-repeat: no-repeat;
@@ -18,26 +18,32 @@
     background-size: cover;
 }
 
-#background{
-   background-color: darkslategrey;
+/* .centraliza {
+   text-align: center;
+} */
+
+header{
+   padding: 20px;         /* Espaçamento interno */
+    margin: 10px 0;        /* Espaçamento externo */
+    border: 1px solid #ccc; /* Bordas */
+    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+    /*background-color: #f9f9f9;  Cor de fundo */
+    background-color: #707070;
+    text-align: center;
+    color: white;
 }
 
-.centraliza {
+section{
+   padding: 20px;         /* Espaçamento interno */
+   margin: 10px auto;        /* Espaçamento externo */
+   border: 1px solid #ccc; /* Bordas */
+   border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+   width: 50%;
+   /* background-color: #f9f9f9; */
+   background-color: #707070;
    text-align: center;
 }
 
-h1 {
-   color: white;
-}
-
-h2 {
-   color: white;
-}
-
-p {
-   color: white;
-}
-
-ol {
-   color: white;
+ol li{
+   list-style-type: none;
 }
