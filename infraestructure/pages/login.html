@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icons/Dragon-Ball-icon.png"> <!-- Define o favicon da página, exibido na aba do navegador -->
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+
+    <header>
+        <!-- Cabeçalho da página, que contém logo e título do site -->
+        <div>
+            <img src="../assets/images/logo-site.png" alt="logo" class="logo"> <!-- Logo do site com classe "logo" para estilização -->
+        </div>
+        <span> <h1>FitLife</h1> </span> <!-- Título do site dentro de um span para controle de layout -->
+    </header>
+    
+    <main>
+        <article>
+            <!-- Seção de formulário de login -->
+            <div id="form">
+                <h1>LOGIN</h1> <!-- Título do formulário de login -->
+                <form action="../pages/adm-page.html"> <!-- Formulário que redireciona para a página do administrador após o envio -->
+                    <label for="name">Name: </label> <!-- Rótulo para o campo de nome -->
+                    <input type="text" id="name" name="name" required placeholder="Enter your name" title="This is a required field"> <!-- Campo de entrada para o nome com placeholder e validação obrigatória -->
+    
+                    <label for="email">Email: </label> <!-- Rótulo para o campo de email -->
+                    <input type="text" id="email" name="email" required placeholder="Enter your email" title="This is a required field"> <!-- Campo de entrada para o email com placeholder e validação obrigatória -->
+    
+                    <label for="password">Password: </label> <!-- Rótulo para o campo de senha -->
+                    <input type="password" id="password" name="password" required placeholder="Enter your password" title="This is a required field"> <!-- Campo de entrada para a senha com placeholder e validação obrigatória -->
+    
+                    <label for="birthday">Date of birth: </label> <!-- Rótulo para o campo de data de nascimento -->
+                    <input type="date" name="birthday" id="birthday" required placeholder="Enter your date of birth" title="This is a required field"> <!-- Campo de entrada para data de nascimento com validação obrigatória -->
+    
+                    <div class="radio-group">
+                        <label>Sex: </label> <!-- Rótulo para o grupo de opções de sexo -->
+                        <input type="radio" name="sex" id="male" value="male"> <!-- Opção de rádio para o sexo masculino -->
+                        <label for="male">Male</label> <!-- Rótulo para a opção masculina -->
+    
+                        <input type="radio" name="sex" id="female" value="female"> <!-- Opção de rádio para o sexo feminino -->
+                        <label for="female">Female</label> <!-- Rótulo para a opção feminina -->
+                    </div>
+    
+                    <button type="submit" class="btn-submit">Login</button> <!-- Botão de envio do formulário com classe "btn-submit" para estilização -->
+    
+                    <button type="reset" class="btn-clear">Clear</button> <!-- Botão para limpar o formulário com classe "btn-clear" para estilização -->
+                </form>
+            </div>
+        </article>
+    
+        <article>
+            <!-- Seção de login por redes sociais -->
+            <form action="../pages/adm-page.html"> <!-- Formulário que redireciona para a página do administrador ao clicar nos botões de redes sociais -->
+                <div id="socialnetwork">
+                    <h4>Or login with: </h4> <!-- Título da seção de login com redes sociais -->
+                    <span> <button type="submit"> <img src="../assets/icons/facebook-logo.png" alt="" class="logo"></button> </span> <!-- Botão para login via Facebook com imagem de logo -->
+                    <span> <button type="submit"> <img src="../assets/icons/google-logo.png" alt="" class="logo"></button></span> <!-- Botão para login via Google com imagem de logo -->
+                    <span> <button type="submit"> <img src="../assets/icons/twitter-logo.png" alt="" class="logo"></button></span> <!-- Botão para login via Twitter com imagem de logo -->
+                </div>
+            </form>
+        </article>
+    </main>
+    
+</body>
+</html>
