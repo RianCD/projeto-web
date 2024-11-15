@@ -16,43 +16,22 @@ header {
 }
 
 body {
-    /* background: url(../images/logo-site.png) no-repeat; Define a imagem de fundo e impede repetição */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-    background-position: center center; /* Centraliza a imagem na tela */
-    width: 100%; /* Largura do corpo da página */
-    /* background-color: #ccc; Cor de fundo do corpo da página */
-    background-color: rgba(70, 70, 70);
+    background-color: #ccc;
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
 }
 
-body::before {
-    content: ""; /* Adiciona um elemento pseudo antes do conteúdo */
-    position: absolute; /* Posiciona-o em relação à tela */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background-color: rgba(70, 70, 70, 0.7); Sobreposição semi-transparente escura */
-    background-color: #ccc;
-    z-index: 1; /* Define a prioridade na sobreposição */
-}
-
-body * {
-    position: relative; /* Garante que o conteúdo principal esteja acima da sobreposição */
-    z-index: 2; /* Define prioridade acima da sobreposição */
-}
 
 nav#menu {
-    display: block;
+    display: flex;
+    justify-content: flex-start; /* Alinha itens à esquerda */
 }
 
 nav#menu ul{
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: -20px;
-    left: 300px;
-
+    position: relative; /* Define posição relativa */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
 }
 
 nav#menu li{
@@ -72,35 +51,30 @@ nav#menu a {
 }
 
 .title{
-    padding: 20px; /* Espaçamento interno do título */
-    margin: 0px; /* Remove o espaçamento externo */
     text-align: center; /* Centraliza o texto */
     font-size: 300%; /* Aumenta o tamanho do texto */
     font-weight: bolder;
+    margin-bottom: 5px;
 }
 
 article p {
-    margin: 0px; /* Remove o espaçamento externo */
+    margin-bottom: 5px; /* Remove o espaçamento externo */
     text-align: center; /* Centraliza o texto */
 }
 
 article > section{
     padding: 0px; /* Espaçamento interno */
     margin: 5px auto; /* Espaçamento externo com centralização */
-    /* border: 1px solid #ccc; Borda */
     border-radius: 10px; /* Arredondamento dos cantos */
     width: 50%; /* Largura da seção */
-    /* background-color: #707070; Cor de fundo */
     text-align: center; /* Centraliza o texto */
     opacity: 0.8; /* Define a transparência */
 }
 
 figure {
     padding: 15px; /* Espaçamento interno */
-    margin: 10px auto; /* Espaçamento externo com centralização */
-    /* width: 300px; Largura fixa do contêiner da figura */
+    /* margin: 10px; Espaçamento externo com centralização */
     display: block;
-    /* margin: 0 auto; Centraliza horizontalmente */
     text-align: center;
     background-color: rgba(70, 70, 70, 0.6);
     border: 1px solid #ccc; /* Bordas */
@@ -108,7 +82,7 @@ figure {
 }
 
 figure img {
-    width: 40%;
+    width: 50%;
     height: auto; /* Mantém a proporção da imagem */
     border: 1px solid #707070; /* Bordas */
     border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
@@ -118,36 +92,14 @@ figure figcaption{
     color: white;
 }
 
-@media (min-width: 768px) {
-    body {
-        background-position: center center; /* Centraliza a imagem de fundo */
-        width: 99%; /* Largura do corpo */
-        background-color: #ccc; /* Cor de fundo */
-    }
-    
-    nav {
-        display: flex; /* Exibe itens em linha */
-        justify-content: flex-start; /* Alinha itens à esquerda */
-    }
-    
-    nav#menu ul {
-        position: relative; /* Define posição relativa */
-        top: 0; /* Alinha ao topo */
-        left: 0; /* Alinha à esquerda */
-    }
-    
-    section {
-        width: 50%; /* Largura da seção no desktop */
-        margin: 10px auto; /* Centraliza a seção */
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 480px) { 
+    /*Media query para dispositivos móveis de no máximo 480px*/
     header {
-        flex-direction: column; /* Exibe itens em coluna */
+        flex-direction: flex; /* Exibe itens em coluna */
         align-items: center; /* Centraliza os itens */
         text-align: center; /* Centraliza o texto */
-        height: auto; /* Ajusta a altura */
+        /* height: auto; Ajusta a altura */
+        padding: 5px;
     }
     
     .logo {
@@ -159,19 +111,19 @@ figure figcaption{
         display: flex; /* Exibe itens em linha */
         flex-direction: row; /* Exibe itens em coluna */
         align-items: center; /* Centraliza itens */
-        padding: 0px; /* Remove espaçamento interno */
-        margin: 0px; /* Remove espaçamento externo */
         border: 0px solid; /* Remove borda */
-        opacity: 0.8; /* Define a transparência do menu */
+        opacity: 0.8; 
+        position: absolute;
+        margin-bottom: 10px;
     }
     nav#menu ul {
         padding: 0px; /* Remove espaçamento */
         text-align: center; /* Centraliza texto */
         display: flex; /* Exibe itens em linha */
-        width: 100%; /* Largura total */
-        gap: 8px; /* Espaço entre itens */
+        gap: 5px; /* Espaço entre itens */
         justify-content: center;
         left: 0px;
+        position: relative;
     }
     nav#menu li {
         display: block; /* Exibe itens em bloco */
@@ -180,7 +132,6 @@ figure figcaption{
         text-align: center; /* Centraliza o texto */
     }
 
-    
     section {
         width: 90%; /* Largura da seção em dispositivos móveis */
         margin: 10px auto; /* Centraliza a seção */
@@ -190,5 +141,27 @@ figure figcaption{
     figure {
         width: 80%; /* Largura da figura */
         margin: auto; /* Centraliza a figura */
+    }
+    body{
+        width: auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    /*Media query para dispositivos de no minimo 480px e no máximo 768px*/
+    /*Está query não teve a necessidade de ajustes*/
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    /*Media query para telas pequenas, laptops*/
+    body{
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+    /*Media query para desktops, telas grandes*/
+    body{
+        font-size: 1.5em;
     }
 }

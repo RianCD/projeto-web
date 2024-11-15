@@ -46,3 +46,20 @@ img {
   margin-right: 20px; /* Adiciona uma margem direita de 20 pixels para espaçar a imagem do conteúdo adjacente */
 }
 
+
+@media (min-width: 769px) and (max-width: 1024px){
+  .tg{
+    width: 80%; /* Defina uma largura para a tabela */
+    height: 25%;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+  /*Media query para desktops, telas grandes*/
+  .tg{
+    width: 80%; /* Defina uma largura para a tabela */
+    height: 25%;
+    font-size: 1.5em;
+  }
+}

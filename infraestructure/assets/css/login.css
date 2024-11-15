@@ -107,3 +107,39 @@ div#socialnetwork button{
     background-color: lightgray;
     border: none;
 }
+
+@media (max-width: 480px) {
+    /*Media query para dispositivos móveis de no máximo 480px*/
+    header{
+        /* display: flex; */
+        flex-direction: flex; /* Exibe itens em linha */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        padding: 5px;
+        height: 50px;
+    }
+
+    div#form{
+        display: block;
+        width: 400px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    /*Media query para dispositivos de no minimo 480px e no máximo 768px*/
+    /*Está query não teve a necessidade de ajustes*/
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    /*Media query para telas pequenas, laptops*/
+    body{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+    /*Media query para desktops, telas grandes*/
+    body{
+        font-size: 1.5em;
+    }
+}
