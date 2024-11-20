@@ -1,183 +1,82 @@
-header {
-    padding: 20px; /* Espaçamento interno do cabeçalho */
-    background-color: #444040; /* Cor de fundo do cabeçalho */
-    color: white; /* Cor do texto no cabeçalho */
-    opacity: 0.9; /* Define a transparência do cabeçalho */
-    display: flex; /* Exibe itens em linha no cabeçalho */
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    height: 30px; /* Altura do cabeçalho */
-    border: 1px solid #ccc; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-}
-
-.logo {
-    width: 50px; /* Largura da imagem do logo */
-    margin-right: 20px; /* Espaçamento entre a logo e o nome */
+.hdr-custom {
+    background-color: #707070; /* Define a cor de fundo do cabeçalho */
+    display: flex; /* Exibe os elementos filhos em linha (layout flexível) */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 body {
-    background-color: #ccc;
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
-}
-
-
-nav#menu {
-    display: flex;
-    justify-content: flex-start; /* Alinha itens à esquerda */
-}
-
-nav#menu ul{
-    list-style: none;
-    text-transform: uppercase;
-    position: relative; /* Define posição relativa */
-    top: 0; /* Alinha ao topo */
-    left: 0; /* Alinha à esquerda */
-}
-
-nav#menu li{
-    display: inline-block;
-    margin: 0 10px;
-}
-
-nav#menu li:hover {
-    background-color: #383838; /* Cor ao passar o mouse sobre o item */
-    border-radius: 6px; /* Aumenta o arredondamento ao passar o mouse */
-}
-
-nav#menu a {
-    color: black; /* Cor do texto dos links */
-    text-decoration: underline; /* Sublinhar o texto do link */
-    font-size: 14px; /* Tamanho da fonte dos links */
-}
-
-.title{
-    text-align: center; /* Centraliza o texto */
-    font-size: 300%; /* Aumenta o tamanho do texto */
-    font-weight: bolder;
-    margin-bottom: 5px;
-}
-
-section{
-    padding: 0px; /* Espaçamento interno */
-    margin: 5px auto; /* Espaçamento externo com centralização */
-    border-radius: 10px; /* Arredondamento dos cantos */
-    width: 50%; /* Largura da seção */
-    text-align: center; /* Centraliza o texto */
-    opacity: 0.8; /* Define a transparência */
+    background-color: #ccc; /* Define a cor de fundo da página */
+    font-family: Arial, Helvetica, sans-serif; /* Define as fontes preferenciais para o texto */
 }
 
 .main-banner {
-    padding: 15px; /* Espaçamento interno */
-    /* margin: 10px; Espaçamento externo com centralização */
-    display: block;
-    text-align: center;
-    background-color: rgba(70, 70, 70, 0.6);
-    border: 1px solid #ccc; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+    padding: 15px; /* Define espaçamento interno de 15px */
+    display: block; /* Garante que o elemento seja exibido como bloco */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(70, 70, 70, 0.2); /* Define uma cor de fundo translúcida */
 }
 
-.main-banner img {
-    width: 50%;
-    height: auto; /* Mantém a proporção da imagem */
-    border: 1px solid #707070; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
+.treino-img {
+    width: 50%; /* Define a largura da imagem como 50% do contêiner pai */
+    border: 1px solid #707070; /* Aplica uma borda de 1px com cor específica */
+    border-radius: 10px; /* Arredonda os cantos da borda com raio de 10px */
+    max-width: 100%; /* Garante que a largura máxima da imagem não ultrapasse 100% */
+    height: auto; /* Mantém a proporção original da imagem */
 }
 
-article{
-    text-align: center;
+article {
+    text-align: center; /* Centraliza o texto dentro do artigo */
+    display: flex; /* Ativa o Flexbox para o layout do artigo */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
 }
 
-.topics{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    text-transform: uppercase;
+.topics {
+    display: flex; /* Ativa o Flexbox para o contêiner de tópicos */
+    flex-direction: row; /* Organiza os itens em linha */
+    gap: 50px; /* Define um espaçamento de 50px entre os itens */
+    text-transform: uppercase; /* Transforma o texto dos itens para letras maiúsculas */
 }
 
-
-.topic{
-    display: block;
-    /* background-color: #707070; */
-    /* border: 1px solid #707070; Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    padding: 5px;
-    width: 30%;
+.topic {
+    display: block; /* Exibe os elementos em bloco */
+    border-radius: 10px; /* Arredonda os cantos do elemento */
+    padding: 5px; /* Define espaçamento interno de 5px */
+    width: 30%; /* Define a largura do tópico como 30% do contêiner pai */
 }
 
-.topic img{
-    width: 100px;
+.topic img {
+    max-width: 100px; /* Limita a largura máxima da imagem para 100px */
 }
 
-
-@media (max-width: 480px) { 
-    /*Media query para dispositivos móveis de no máximo 480px*/
-    header {
-        flex-direction: flex; /* Exibe itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-        padding: 5px;
+@media (max-width: 576px) {
+    /* Regras aplicáveis a telas extra pequenas (máx. 576px) */
+    .treino-img {
+        width: 100%; /* Ajusta a largura da imagem para 100% no modo responsivo */
     }
-    
-    .logo {
-        width: 40px; /* Reduz o tamanho da logo */
-        margin: 10px auto; /* Centraliza e define espaçamento */
+    .topics {
+        display: block; /* Ajusta o layout dos tópicos para exibição em bloco */
+        flex-direction: row; /* Mantém os itens em linha (caso necessário) */
+        gap: 50px; /* Define o espaçamento entre os itens */
+        text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
     }
-    
-    nav {
-        display: flex; /* Exibe itens em linha */
-        flex-direction: row; /* Exibe itens em coluna */
-        align-items: center; /* Centraliza itens */
-        border: 0px solid; /* Remove borda */
-        opacity: 0.8; 
-        position: absolute;
-        margin-bottom: 10px;
-    }
-    nav#menu ul {
-        padding: 0px; /* Remove espaçamento */
-        text-align: center; /* Centraliza texto */
-        display: flex; /* Exibe itens em linha */
-        gap: 5px; /* Espaço entre itens */
-        justify-content: center;
-        left: 0px;
-        position: relative;
-    }
-    nav#menu li {
-        display: block; /* Exibe itens em bloco */
-        margin: 5px 0; /* Espaço entre itens */
-        padding: 5px; /* Espaçamento interno */
-        text-align: center; /* Centraliza o texto */
-    }
-
-    section {
-        width: 90%; /* Largura da seção em dispositivos móveis */
-        margin: 10px auto; /* Centraliza a seção */
-        padding: 15px; /* Espaçamento interno */
-        text-align: center;
-    }
-    figure {
-        width: 80%; /* Largura da figura */
-        margin: auto; /* Centraliza a figura */
-    }
-    body{
-        width: auto;
+    .topic {
+        display: block; /* Garante que os tópicos sejam exibidos como blocos */
+        border-radius: 10px; /* Mantém o arredondamento dos cantos */
+        padding: 5px; /* Define espaçamento interno */
+        width: 100%; /* Ajusta a largura dos tópicos para ocupar 100% do espaço disponível */
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px){
-    /*Media query para dispositivos de no minimo 480px e no máximo 768px*/
-    /*Está query não teve a necessidade de ajustes*/
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Regras aplicáveis a telas pequenas (mín. 576px e máx. 768px) */
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
-    /*Media query para telas pequenas, laptops*/
-    body{
-        font-size: 1.4em;
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Regras aplicáveis a telas médias (mín. 768px e máx. 991px) */
 }
 
-@media (min-width: 1025px) and (max-width: 1200px){
-    /*Media query para desktops, telas grandes*/
-    body{
-        font-size: 1.5em;
-    }
+@media (min-width: 1200px) {
+    /* Regras aplicáveis a telas extra grandes (mín. 1200px) */
 }

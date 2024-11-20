@@ -1,85 +1,41 @@
 header {
-    padding: 10px;         /* Espaçamento interno */
-    margin: 10px 0;        /* Espaçamento externo */
-    border: 1px solid #ccc; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    background-color: #707070;
-    text-align: center;
-    color: white;
-  }
-
-body{
-    /* background-color: #707070; */
-    background-color: rgba(70, 70, 70);
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
-
+    padding: 10px;         /* Espaçamento interno de 10px ao redor do conteúdo do cabeçalho */
+    text-align: center;    /* Centraliza o texto horizontalmente */
+    color: white;          /* Define a cor do texto como branco */
 }
 
-main{
-    text-align: center;
-    color: black;
+.bg-custom {
+    background-color: #707070; /* Define a cor de fundo personalizada como cinza */
 }
 
-span{
-    padding: 2px;
-    margin: 10px;
-    text-align: center;
+main {
+    text-align: center;    /* Centraliza o texto horizontalmente */
+    display: block;        /* Define o elemento como um bloco */
 }
 
-section{
-    padding: 10px;         /* Espaçamento interno */
-    margin: 0 auto;        /* Espaçamento externo */
-    border: 1px solid #ccc; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    width: 50%;
-    /* background-color: #f9f9f9; */
-    background-color: #707070;
-    text-align: center;
+section {
+    border: 1px solid #ccc;     /* Adiciona borda de 1px com cor cinza claro */
+    border-radius: 10px;        /* Arredonda os cantos da borda com raio de 10px */
+    color: #ccc;                /* Define a cor do texto como cinza claro */
 }
 
-@media (max-width: 480px) {
-    /*Media query para dispositivos móveis de no máximo 480px*/
-    header{
-        display: block;
-    }
-    figure img{
-        width: 100%;
-    }
-
-    section{
-        display: block;
-    }
+.container-fluid {
+    max-width: 100%;           /* Garante que o contêiner ocupe no máximo 100% da largura */
+    overflow-x: hidden;        /* Oculta o conteúdo que ultrapassar a largura no eixo horizontal */
 }
 
-@media (min-width: 481px) and (max-width: 768px){
-    /*Media query para dispositivos de no minimo 480px e no máximo 768px*/
-    header{
-        display: block;
-    }
-    figure img{
-        width: 100%;
-    }
-    section{
-        display: block;
-    }
+@media (max-width: 576px) {
+    /* Regras para dispositivos extra pequenos (largura máxima de 576px) */
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
-    /*Media query para telas pequenas, laptops*/
-    body{
-        font-size: 1.6em;
-    }
-    figure img{
-        width: 100%;
-    }
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Regras para dispositivos pequenos (largura entre 576px e 768px) */
 }
 
-@media (min-width: 1025px) and (max-width: 1200px){
-    /*Media query para desktops, telas grandes*/
-    body{
-        font-size: 1.7em;
-    }
-    figure img{
-        width: 100%;
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Regras para dispositivos grandes (largura entre 768px e 991px) */
+}
+
+@media (min-width: 1200px) {
+    /* Regras para dispositivos extra grandes (largura mínima de 1200px) */
 }

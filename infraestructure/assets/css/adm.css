@@ -1,16 +1,8 @@
-header {
-  padding: 20px; /* Espaçamento interno do cabeçalho */
-  background-color: #444040; /* Cor de fundo do cabeçalho */
-  color: white; /* Cor do texto no cabeçalho */
-  opacity: 0.9; /* Define a transparência do cabeçalho */
+.hdr-custom {
+  background-color: #707070; /* Define a cor de fundo do cabeçalho */
   display: flex; /* Exibe itens em linha no cabeçalho */
-  height: 30px; /* Ajuste a altura conforme necessário */
-  border: 1px solid #ccc; /* Bordas */
-  position: fixed; /* Torna o cabeçalho fixo no topo da página */
-  top: 0; /* Posiciona o cabeçalho no topo */
-  left: 0; /* Alinha à esquerda */
-  right: 0; /* Alinha à direita */
-  z-index: 1000; /* Coloca o cabeçalho acima de outros elementos */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
 
 .logo {
@@ -18,48 +10,18 @@ header {
   margin-right: 20px; /* Espaçamento entre a logo e o nome */
 }
 
-body header {
-  /* Centraliza o conteúdo do header horizontal e verticalmente */
-  justify-content: center; /* Alinha o conteúdo do header ao centro no eixo horizontal */
-  align-items: center; /* Alinha o conteúdo do header ao centro no eixo vertical */
+@media (max-width: 576px) {
+  /* extra small */
 }
 
-body {
-  background-color: lightgray; /* Define a cor de fundo da página como cinza claro */
-  display: flex; /* Define um layout flex para centralizar o conteúdo */
-  justify-content: center; /* Centraliza o conteúdo ao centro no eixo horizontal */
-  align-items: center; /* Centraliza o conteúdo ao centro no eixo vertical */
-  height: 100vh; /* Define a altura da página como 100% da altura da janela de visualização */
-  margin: 0; /* Remove a margem padrão do body */
+@media (min-width: 576px) and (max-width: 768px) {
+  /* small: Estilos para dispositivos pequenos, como tablets em modo retrato */
 }
 
-
-.tg {
-  width: 60%; /* Defina uma largura para a tabela */
-  background-color: white; /* Cor de fundo para a tabela */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
-  border-radius: 8px; /* Cantos arredondados */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* large: Estilos para dispositivos médios, como tablets em modo paisagem e alguns desktops pequenos */
 }
 
-img {
-  width: 25px; /* Define a largura das imagens como 25 pixels */
-  margin-right: 20px; /* Adiciona uma margem direita de 20 pixels para espaçar a imagem do conteúdo adjacente */
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px){
-  .tg{
-    width: 80%; /* Defina uma largura para a tabela */
-    height: 25%;
-    font-size: 1.5em;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px){
-  /*Media query para desktops, telas grandes*/
-  .tg{
-    width: 80%; /* Defina uma largura para a tabela */
-    height: 25%;
-    font-size: 1.5em;
-  }
+@media (min-width: 1200px) {
+  /* extra large: Estilos para telas grandes, como desktops grandes */
 }

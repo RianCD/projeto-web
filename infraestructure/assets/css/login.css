@@ -1,145 +1,44 @@
-header {
-    padding: 20px; /* Espaçamento interno do cabeçalho */
-    background-color: #444040; /* Cor de fundo do cabeçalho */
-    color: white; /* Cor do texto no cabeçalho */
-    opacity: 0.9; /* Define a transparência do cabeçalho */
-    display: flex; /* Exibe itens em linha no cabeçalho */
-    height: 30px; /* Ajuste a altura conforme necessário */
-    border: 1px solid #ccc; /* Bordas */
-    position: fixed; /* Torna o cabeçalho fixo no topo da página */
-    top: 0; /* Posiciona o cabeçalho no topo */
-    left: 0; /* Alinha à esquerda */
-    right: 0; /* Alinha à direita */
-    z-index: 1000; /* Coloca o cabeçalho acima de outros elementos */
+.hdr-custom {
+    background-color: #707070; /* Define a cor de fundo do cabeçalho */
+    display: flex; /* Ativa o Flexbox para organizar os elementos */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+article {
+    display: flex; /* Ativa o Flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.form-custom {
+    max-width: 100%; /* Define o limite máximo da largura como 100% do contêiner pai */
+    padding: 30px; /* Espaçamento interno para separar o conteúdo das bordas */
+    margin: 10px; /* Espaçamento externo entre o formulário e os elementos adjacentes */
+    border: 1px solid #707070; /* Adiciona uma borda com cor definida */
+    border-radius: 10px; /* Arredonda os cantos do formulário */
+    background-color: #707070; /* Define a cor de fundo do formulário */
 }
 
 .logo {
-    width: 50px; /* Largura da imagem do logo */
-    margin-right: 20px; /* Espaçamento entre a logo e o nome */
+    width: 50px; /* Define a largura da imagem do logo */
+    /* margin-right: 20px; Espaçamento comentado entre a logo e outros elementos */
 }
 
+/* Quebras de mídia para responsividade */
 
-body{
-    background-color: lightgray;
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
+/* Dispositivos extra pequenos (largura máxima de 576px) */
+@media (max-width: 576px) {
 }
 
-body header{
-    justify-content: center;
-    align-items: center;
+/* Dispositivos pequenos (largura mínima de 576px e máxima de 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
 }
 
-div#form {
-    display: block;
-    width: 500px;
+/* Dispositivos médios a grandes (largura mínima de 768px e máxima de 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
 }
 
-div#form h1{
-    padding: 20px; /* Espaçamento interno do título */
-    margin: 0px; /* Remove o espaçamento externo */
-    text-align: center; /* Centraliza o texto */
-    font-size: 300%; /* Aumenta o tamanho do texto */
-    font-weight: bolder;
-}
-
-div#form form{
-    display: flex;
-    flex-direction: column; /* Faz com que os itens sejam exibidos em coluna (um embaixo do outro) */
-    /* align-items: stretch; Estica os itens para ocupar a largura completa */
-    padding: 30px;         /* Espaçamento interno */
-    margin: 10px;        /* Espaçamento externo */
-    border: 1px solid #707070; 
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    background-color: #707070;
-    color: white;
-}
-
-div#form form input,
-div#form form label,
-div#form form button {
-    margin-bottom: 10px; /* Adiciona espaço abaixo de cada item */
-}
-
-input{
-    border: 1px solid white; /* Bordas */
-    border-radius: 7px; /* Arredonda todos os cantos com raio de 10px */
-}
-
-
-.btn-submit {
-    border: 1px solid lightgreen; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    background-color: green;
-    color: white;
-}
-
-.btn-clear {
-    border: 1px solid lightcoral; /* Bordas */
-    border-radius: 10px; /* Arredonda todos os cantos com raio de 10px */
-    background-color: red;
-    color: white;
-}
-
-.radio-group {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: flex-start; /* Alinha o texto do rótulo à esquerda */
-}
-
-.radio-option {
-    display: flex;
-    flex-direction: column; /* Coloca o ícone de marcar em cima do texto */
-    align-items: center; /* Centraliza horizontalmente */
-}
-
-
-div#socialnetwork{
-    display: block;
-    text-align: center; /* Centraliza o texto */
-    font-weight: bolder;
-}
-
-div#socialnetwork button{
-    background-color: lightgray;
-    border: none;
-}
-
-@media (max-width: 480px) {
-    /*Media query para dispositivos móveis de no máximo 480px*/
-    header{
-        /* display: flex; */
-        flex-direction: flex; /* Exibe itens em linha */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-        padding: 5px;
-        height: 50px;
-    }
-
-    div#form{
-        display: block;
-        width: 400px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px){
-    /*Media query para dispositivos de no minimo 480px e no máximo 768px*/
-    /*Está query não teve a necessidade de ajustes*/
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-    /*Media query para telas pequenas, laptops*/
-    body{
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px){
-    /*Media query para desktops, telas grandes*/
-    body{
-        font-size: 1.5em;
-    }
+/* Dispositivos extra grandes (largura mínima de 1200px) */
+@media (min-width: 1200px) {
 }

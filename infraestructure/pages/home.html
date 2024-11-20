@@ -6,77 +6,116 @@
     <link rel="stylesheet" href="../assets/css/home.css"> <!-- Link para um arquivo CSS externo que aplica estilos à página -->
     <link rel="shortcut icon" href="../assets/icons/Dragon-Ball-icon.png"> <!-- Define o favicon da página, exibido na aba do navegador -->
     <title>Home</title> <!-- Título da página exibido na aba do navegador -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Importação do framework Bootstrap para estilização e layout responsivo -->
 </head>
 
-<body id="background"> <!-- Define o elemento body e atribui o ID 'background' para estilização específica -->
-    <header>
-        <!-- Cabeçalho da página, que pode conter logo ou título do site -->
+<body> <!-- Define o elemento body para o conteúdo principal da página -->
+    <header class="hdr-custom container-fluid text-white py-3">
+        <!-- Cabeçalho da página com classes de estilo personalizadas e do Bootstrap -->
         <div>
-            <img src="../assets/images/logo-site.png" alt="logo" class="logo"> <!-- Logo do site com classe "logo" para estilização -->
+            <img src="../assets/images/logo-site.png" alt="logo" width="50" class="d-inline-block align-text-center"> 
+            <!-- Logo do site com largura de 50px e alinhamento ao texto -->
         </div>
-        <span> <h1>FitLife</h1> </span> <!-- Título do site dentro de um span para controle de layout -->
+        <h1>FitLife</h1> <!-- Título principal do site -->
     </header>
     
-    <nav id="menu">
-        <!-- Barra de navegação -->
-         <div id="menu">
-            <ul>
-                <li><a href="../pages/sandbox.html" hreflang="en" target="_blank">SandBox</a></li> <!-- Link para a página Sandbox, abre em nova aba e especifica o idioma como inglês -->
-                <li><a href="../pages/home.html">Home</a> </li> <!-- Link para a página inicial -->
-                <li><a href="../pages/contact/contact.html" target="_blank">Contato</a></li> <!-- Link para a página de contato, abre em nova aba -->
+    <nav class="navbar navbar-expand bg-dark navbar-light bg-body-tertiary">
+        <!-- Barra de navegação estilizada com classes Bootstrap -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Área expansível da barra de navegação -->
+            <ul class="navbar-nav">
+                <!-- Lista de links de navegação -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/home.html">Home</a>
+                    <!-- Link para a página inicial com estilo ativo -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/sandbox.html" target="_blank">SandBox</a>
+                    <!-- Link para a página "SandBox", aberto em nova aba -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/contact/contact.html" target="_blank">Contato</a>
+                    <!-- Link para a página de contato, aberto em nova aba -->
+                </li>
             </ul>
-         </div>
+        </div>
     </nav>
-
-    <aside>
-        <!-- Barra lateral, que pode conter informações adicionais ou links -->
-    </aside>
 
     <main>
         <!-- Conteúdo principal da página -->
         <article>
-            <!-- Artigo da página, usado para representar um conteúdo independente dentro do main -->
+            <!-- Artigo principal da página -->
             <section>
-                <h1 class="title">WELCOME TO FITLIFE</h1> <!-- Título de boas-vindas -->
-                <p>Explore personalized workouts, wellness tips, and resources that will inspire you to transform your routine. Let's achieve your fitness goals together!</p> <!-- Parágrafo introdutório -->
+                <h1 class="fs-1 fw-bolder">WELCOME TO FITLIFE</h1> 
+                <!-- Título de boas-vindas estilizado -->
+                <p class="text-center">
+                    Explore personalized workouts, wellness tips, and resources that will inspire you to transform your routine. 
+                    Let's achieve your fitness goals together!
+                </p>
+                <!-- Parágrafo introdutório para engajar o usuário -->
             </section>
             
             <figure class="main-banner">
-                <!-- Elemento de imagem, geralmente utilizado para ilustrar o artigo -->
-                <picture>
-                    <img src="../assets/images/imagem treino.jpg" alt="imagem de treino"> <!-- Imagem ilustrativa de Ramon Dino -->
-                </picture> <!-- Elemento picture para controle da exibição de imagens -->
-                <figcaption>Boost your workout</figcaption>
+                <!-- Figura contendo imagem e legenda -->
+                <img src="../assets/images/imagem treino.jpg" class="img-fluid treino-img" alt="imagem de treino"> 
+                <!-- Imagem ilustrativa otimizada para responsividade -->
+                <figcaption>Boost your workout</figcaption> <!-- Legenda da imagem -->
             </figure>
         </article>
 
-        <article >
-            <h1>To fix your shape, you need a good diet!</h1>
-            <h3>Here are some recipes which will give you a better performance</h3>
+        <article>
+            <!-- Segundo artigo com conteúdo relacionado a dietas -->
+            <h1>To fix your shape, you need a good diet!</h1> 
+            <!-- Título introdutório sobre a importância da dieta -->
+            <h3>Here are some recipes which will give you a better performance</h3> 
+            <!-- Subtítulo para introduzir as receitas -->
             <div class="topics">
+                <!-- Contêiner para os tópicos de dieta -->
                 <div class="topic">
-                    <img src="../assets/images/loss-diet.png" alt="loss-diet">
-                    <h1>weight loss diet</h1>
-                    <p>A weight loss diet is designed to help individuals shed excess body fat in a healthy and sustainable way. It typically emphasizes balanced nutrition, portion control, and mindful eating habits, while prioritizing nutrient-dense foods such as fruits, vegetables, lean proteins, and whole grains. </p>
+                    <img src="../assets/images/loss-diet.png" class="img-fluid" alt="loss-diet"> 
+                    <!-- Imagem para a dieta de perda de peso -->
+                    <h1>weight loss diet</h1> <!-- Título do tópico -->
+                    <p>
+                        A weight loss diet is designed to help individuals shed excess body fat in a healthy and sustainable way. 
+                        It typically emphasizes balanced nutrition, portion control, and mindful eating habits, while prioritizing 
+                        nutrient-dense foods such as fruits, vegetables, lean proteins, and whole grains.
+                    </p>
+                    <!-- Descrição detalhada da dieta de perda de peso -->
                     <ul>
+                        <!-- Lista de links com referências externas -->
                         <li><a href="https://www.health.harvard.edu/topics/diet-and-weight-loss" target="_blank">Havard health publishing</a></li>
                         <li><a href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/tips-to-help-you-lose-weight/" target="_blank">NHS-Tips to help you lose weight</a></li>
                     </ul>
                 </div>
                 <div class="topic">
-                    <img src="../assets/images/gain-diet.png" alt="gain-diet">
-                    <h1>weight gain diet</h1>
-                    <p>A weight gain diet is designed to help individuals increase their body mass in a healthy and controlled manner, often focusing on building muscle rather than just adding fat. It typically emphasizes a higher caloric intake, achieved through nutrient-rich foods like lean proteins, whole grains, healthy fats, and a variety of fruits and vegetables.</p>
+                    <img src="../assets/images/gain-diet.png" alt="gain-diet"> 
+                    <!-- Imagem para a dieta de ganho de peso -->
+                    <h1>weight gain diet</h1> <!-- Título do tópico -->
+                    <p>
+                        A weight gain diet is designed to help individuals increase their body mass in a healthy and controlled manner, 
+                        often focusing on building muscle rather than just adding fat. It typically emphasizes a higher caloric intake, 
+                        achieved through nutrient-rich foods like lean proteins, whole grains, healthy fats, and a variety of fruits and vegetables.
+                    </p>
+                    <!-- Descrição detalhada da dieta de ganho de peso -->
                     <ul>
+                        <!-- Lista de links com referências externas -->
                         <li><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429" target="_blank">What's a good way to gain weight if you're underweight?</a></li>
                         <li><a href="https://www.healthline.com/nutrition/how-to-gain-weight" target="_blank">How to Gain Weight Fast: Tips to Be Safe and Healthy</a></li>
                     </ul>
                 </div>
                 <div class="topic">
-                    <img src="../assets/images/muscle-diet.png" alt="muscle-diet">
-                    <h1>diet for gaining muscle mass</h1>
-                    <p>Gaining muscle mass involves a combination of strength training, proper nutrition, and adequate recovery. The key to building muscle is creating a calorie surplus while ensuring sufficient protein intake to repair and grow muscle fibers after workouts.</p>
+                    <img src="../assets/images/muscle-diet.png" class="img-fluid" alt="muscle-diet"> 
+                    <!-- Imagem para a dieta de ganho de massa muscular -->
+                    <h1>diet for gaining muscle mass</h1> <!-- Título do tópico -->
+                    <p>
+                        Gaining muscle mass involves a combination of strength training, proper nutrition, and adequate recovery. 
+                        The key to building muscle is creating a calorie surplus while ensuring sufficient protein intake to repair 
+                        and grow muscle fibers after workouts.
+                    </p>
+                    <!-- Descrição detalhada da dieta de ganho de massa muscular -->
                     <ul>
+                        <!-- Lista de links com referências externas -->
                         <li><a href="https://www.healthline.com/nutrition/26-muscle-building-foods" target="_blank">26 Foods to Eat to Gain Muscle</a></li>
                         <li><a href="https://www.mensjournal.com/food-drink/the-top-30-muscle-building-foods" target="_blank">The 30 Best Muscle-Building Foods to Add Size</a></li>
                     </ul>
@@ -86,7 +125,10 @@
     </main>
 
     <footer>
-        <!-- Rodapé da página, com classe 'centraliza' para centralizar o conteúdo (não implementado neste exemplo) -->
+        <!-- Rodapé da página -->
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Inclusão do script JavaScript do Bootstrap para funcionalidades interativas -->
 </body>
 </html>

@@ -8,32 +8,66 @@
     <link rel="shortcut icon" href="../assets/icons/Dragon-Ball-icon.png"> <!-- Define o favicon da página, exibido na aba do navegador -->
     <link rel="stylesheet" href="../assets/css/index.css"> <!-- Link para um arquivo CSS externo que aplica estilos à página -->
     <link rel="stylesheet" href="../assets/css/global.css"> <!-- Link para um arquivo CSS externo que aplica estilos globais à página -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Link para o CSS do Bootstrap, com integridade para garantir segurança -->
 </head>
 
-<body>
-    <header>
-        <h1 class="title">Initial Page</h1> <!-- Título principal da página com a classe "title" -->
-        <span><a href="../pages/home.html" target="_blank"> Home - project </a></span> <!-- Link para a página inicial, abre em uma nova aba -->
-        <span><a href="../pages/sandbox.html" hreflang="en" target="_blank"> SandBox Page </a></span> <!-- Link para a página SandBox, especificando o idioma como inglês e abrindo em uma nova aba -->
-        <span><a href="../pages/login.html" target="_blank">Login page</a></span>
+<body class="bg-custom"> <!-- O corpo da página utiliza a classe "bg-custom" para personalização -->
+    <header class="bg-dark"> <!-- Cabeçalho com fundo escuro -->
+        <h1>Initial Page</h1> <!-- Título principal da página -->
     </header>
+    <nav class="navbar navbar-expand bg-dark navbar-light bg-body-tertiary">
+        <!-- Barra de navegação com estilo do Bootstrap, expandível e com tema claro e escuro -->
+        <div class="container-fluid">
+            <!-- Container fluido para ajustar o conteúdo ao tamanho da janela -->
+            <a class="navbar-brand" href="#">
+              <!-- Link de marca com logotipo e texto -->
+              <img src="../assets/images/logo-site.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center">
+              <!-- Imagem do logotipo com dimensões fixas e alinhamento central -->
+              FitLife
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Div para gerenciar o colapso do menu de navegação em telas menores -->
+                <ul class="navbar-nav">
+                  <!-- Lista de navegação -->
+                  <li class="nav-item">
+                    <!-- Item de navegação -->
+                    <a class="nav-link active" aria-current="page" href="../pages/home.html" target="_blank">Home</a>
+                    <!-- Link para a página inicial com atributo 'target' para abrir em nova aba -->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/sandbox.html" target="_blank">SandBox</a>
+                    <!-- Link para a página SandBox -->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/login.html" target="_blank">Login</a>
+                    <!-- Link para a página de login -->
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </nav>
 
     <main>
-        <p>
+        <!-- Elemento principal da página -->
+        <p class="fs-3 fw-bolder">
+            <!-- Parágrafo estilizado com classes Bootstrap para tamanho de fonte e peso da fonte -->
             The initial page is dedicated to initializing the project and navigating through it.
-        </p> <!-- Parágrafo descrevendo o propósito da página inicial -->
-
+        </p> 
         <h2>Pallet colors</h2> <!-- Subtítulo para a seção de paleta de cores -->
         <figure>
-            <img src="../assets/images/pallet-colors.jpeg" alt="pallet-colors" width="550px"> <!-- Imagem ilustrativa da paleta de cores com largura definida -->
-        </figure> <!-- Container semântico para a imagem da paleta de cores -->
-
-        <section>
-            <h2>Links to alternative activities</h2> <!-- Subtítulo para uma seção de links de atividades alternativas -->
-            <ul>
-                <!-- Lista não ordenada para incluir links ou itens adicionais -->
-            </ul>
-        </section> <!-- Fim da seção de atividades alternativas -->
+            <!-- Elemento semântico para agrupar a imagem da paleta de cores -->
+            <img src="../assets/images/pallet-colors.jpeg" class="img-fluid" alt="pallet-colors" width="550px">
+            <!-- Imagem da paleta de cores com estilo fluido e largura fixa -->
+        </figure>
+        <section class="bg-dark">
+            <!-- Seção com fundo escuro -->
+            <h2>Links to alternative activities</h2>
+            <!-- Subtítulo da seção -->
+        </section>
+        <!-- Fim da seção -->
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Script do Bootstrap para funcionalidade de componentes como menus e carrosséis -->
 </body>
 </html>
